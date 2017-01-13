@@ -1,0 +1,35 @@
+angular.module 'PersonalManagementCtr', [
+  'ngResource'
+  'ngRoute'
+]
+
+.config [
+  '$routeProvider'
+  '$locationProvider'
+  ($routeProvider, $locationProvider)->
+
+    $locationProvider.html5Mode
+      enabled: true
+      requireBase: false
+
+    $routeProvider.when '/home_angular',
+      templateUrl: "<%= asset_path('angular/home/index.html') %>"
+      controller: 'Home::IndexCtrl'
+    .when '/log_in',
+      templateUrl: "<%= asset_path('angular/sessions/new.html') %>"
+      controller: 'Sessions::IndexCtrl'
+]
+
+.controller 'AppCtrl', [
+  '$scope'
+  ($s)->
+    $s.menu =
+      openAngularPeople: ->
+        window.open '/home_angular', '_self'
+      openVuePeople: ->
+        window.open '/home_vue', '_self'
+      logIn: ->
+        window.open '/log_in', '_self'
+      logOut: ->
+        window.open '/log_out', '_self'
+]

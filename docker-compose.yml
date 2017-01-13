@@ -1,8 +1,8 @@
 web:
   build: .
-  command: bundle exec rails s -p 5050 -b '0.0.0.0'
+  command: bundle exec rails s -p 8000 -b '0.0.0.0'
   ports:
-    - "5050:3001"
+    - "8000:8000"
   links:
     - db
   volumes:
