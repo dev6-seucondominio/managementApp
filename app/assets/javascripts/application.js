@@ -15,4 +15,5 @@
 
 //= require_tree ./lib/angular
 //= require angular-app
-//= require_tree ./erp/angular
+//= require_tree ./home
+//  require_tree ./erp
