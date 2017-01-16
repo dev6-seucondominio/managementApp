@@ -2,6 +2,9 @@ FROM ruby:2.3.1
 
 RUN apt-get update -qq && apt-get install -y build-essential
 
+# for redis
+RUN apt-get install -y redis-server
+
 # for postgres
 RUN apt-get install -y libpq-dev postgresql-client
 

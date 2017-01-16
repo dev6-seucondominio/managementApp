@@ -9,6 +9,25 @@ web:
     - .:/erp
   volumes_from:
     - bundle
+# worker:
+#   build: .
+#   command: bundle exec sidekiq -e development
+#   volumes:
+#     - .:/erp
+#   volumes_from:
+#     - bundle
+#   environment:
+#     RAILS_ENV: development
+#   links:
+#     - db
+#     - redis
+# redis:
+#   image: redis
+#   command: redis-server /usr/local/etc/redis/redis.conf
+#   volumes:
+#     - ./redis.conf:/usr/local/etc/redis/redis.conf
+#   ports:
+#     - "6380"
 bundle:
   image: managementapp_web
   volumes:

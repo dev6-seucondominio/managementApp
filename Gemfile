@@ -10,6 +10,10 @@ gem 'bcrypt'
 gem 'pg'
 gem 'mongoid'
 
+gem 'sidekiq'
+gem 'redis'
+gem 'redis-namespace'
+
 gem 'jquery-rails'
 
 gem 'coffee-rails', '>= 4.1.0'
