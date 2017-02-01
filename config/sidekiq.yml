@@ -1,0 +1,9 @@
+# Esse Comando serve para
+# parar de dar esse erro
+# ERR max number of clients reached
+:concurrency: 3
+
+:queues:
+  - critical
+  - default
+  - lower

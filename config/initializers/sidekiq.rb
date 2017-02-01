@@ -1,5 +1,10 @@
-# config/initializers/sidekiq.rb
+require 'sidekiq/api'
+redis_config = { namespace: 'sidekiq_development', :size => 5 }
 
 Sidekiq.configure_server do |config|
-  config.redis = { url: "redis://172.17.0.9:6380", namespace: 'sidekiq_development'  }
+  config.redis = redis_config
+end
+
+Sidekiq.configure_client do |config|
+  config.redis = redis_config
 end

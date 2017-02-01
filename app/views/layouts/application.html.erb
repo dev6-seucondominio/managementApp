@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html ng-app="PersonalManagementCtr" ng-controller="AppCtrl">
   <head>
-    <title>ManagementApp</title>
+    <title ng-bind="'GP &#45; ' + title"></title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <nav class="pg-menu-app">
+      <ul class="pg-menu-l">
+        <li class="pg-menu-item">Button 1</li>
+        <li class="pg-menu-item">Button 2</li>
+        <li class="pg-menu-item">Button 3</li>
+        <li class="pg-menu-item">Button 4</li>
+        <li class="pg-menu-item">Button 5</li>
+      </ul>
+      <ul class="pg-menu-r">
+        <li class="pg-menu-item">Button 1</li>
+        <li class="pg-menu-item">Button 2</li>
+        <li class="pg-menu-item">Button 3</li>
+        <li class="pg-menu-item">Button 4</li>
+        <li class="pg-menu-item">Button 5</li>
+      </ul>
+    </nav>
 
     <ng-view></ng-view>
 

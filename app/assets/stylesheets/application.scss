@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+html, body, ul {
+  margin: 0;
+  padding: 0
+}
+
+ul > li{
+  list-style: none
+}
+
+.pg-menu-app {
+  background: rgba(0,0,0,0.1);
+  overflow: auto;
+  .pg-menu-l{
+    display: flex;
+    float: left;
+    .pg-menu-item{
+      padding: 1em 1em;
+      cursor: pointer;
+      &:hover {
+        background: rgba(0,0,0,0.1);
+      }
+    }
+  }
+  .pg-menu-r{
+    display: flex;
+    float: right;
+    .pg-menu-item{
+      padding: 1em 1em;
+      cursor: pointer;
+      &:hover {
+        background: rgba(0,0,0,0.1);
+      }
+    }
+  }
+}
